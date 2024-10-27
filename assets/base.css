@@ -1,136 +1,51 @@
-<header>
-
-  <section>
-    <nav>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Menu</a></li>
-        <li><a href="">Contact</a></li>
-
-      </ul>
-
-    </nav>
-  </section>
-  <h1>Paulines Website</h1>
-</header>
-
-<main>
-  <section class="thema1">
-    <h2>Thema 1</h2>
-
-    <p>Diese Website hat keinen Inhalt.</p>
-
-    <ul>
-      <details>
-        <summary>
-
-        </summary>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-
-      </details>
-    </ul>
-
-  </section class="thema1">
-
-  <section class="thema2">
-
-    <h2>Thema 2</h2>
-
-    <p>Keinen Inhalt hat diese Website.</p>
-
-    <ul>
-      <details>
-        <summary>
-
-        </summary>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-
-      </details>
-    </ul>
-
-  </section class="thema2">
-
-  <section class="thema3">
-    <h2>Thema 3</h2>
-
-    <p>Inhalt hat diese Website keinen.</p>
-
-    <ul>
-      <details>
-        <summary>
-
-        </summary>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </details>
-    </ul>
-
-  </section class="thema3">
-
-</main>
-
+Paulines CSS base style
 
 header {
-  background-color: lightseagreen;
+  background-color: black;
   color: white;
 }
 
 header nav ul li {
   list-style: none;
-  display: inline;
-}
-h2 {
-  color: black;
-  background-color: lightskyblue;
+  display: inline; 
 }
 
-h1 {
+
+nav ul {
   text-align: center;
-  background-color: none;
 }
+
 
 a:hover {
   background-color: white;
   text-decoration: none;
 }
 
+
+h1 {
+  text-align: center;
+  background-color: none;
+}
+
+
+
 .thema1 {
   background-color: lightcyan;
 }
-.thema2 {
-  background-color: lightcyan;
-}
-.thema3 {
-  background-color: lightcyan;
+
+
+main, header {
+  font-family: "Courier New", monospace;
+  font-weight: normal;
 }
 
-main {
-  font-family: "Courier New", monospace;
-}
-main {
-  font-weight: normal;
-}
-header {
-  font-family: "Nimbus Mono PS", "Courier New", monospace;
-  font-weight: normal;
-}
 
 body {
   margin: 0 auto;
   max-width: 800px;
 }
 
-/* box-sizing: border-box; */
 
-nav ul {
-  text-align: center;
-}
 
-main {
-  margin: 50px;
-}
+
+
