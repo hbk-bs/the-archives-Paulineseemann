@@ -28,10 +28,11 @@ h1 {
 }
 
 
-
-.schritt1 {
-  background-color: lightcyan;
+h2 {
+  color: black;
+  background-color: lavender;
 }
+
 
 
 main, header {
