@@ -85,13 +85,14 @@ figure img {
 
 iframe {
     margin-bottom: 36px;
-    width: 560px;
-    height: 190px;
-    border: none;
+    width: 500px;
+    height: 300px;
+  border: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
+    padding-bottom: 36px;
+   
 }
 
 @media (max-width: 768px) {
