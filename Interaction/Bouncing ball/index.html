@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouncing Circle</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+  <script>
+    // state
+    let circleX = 100;
+    let circleY = 0;
+    let xSpeed = 1;
+    let ySpeed = 1;
+
+    function setup() {
+      colorMode(HSL, 360, 100, 100, 100);
+      createCanvas(600, 200);
+    }
+
+    function draw() {
+      // clear out old frames
+      background(0, 0, 11);
+
+      // draw current frame based on state
+      circle(circleX, circleY, 50);
+
+      // modify state
+      circleX = circleX + xSpeed;
+      circleY = circleY + ySpeed;
+
+      // bounce off left and right
+      if (circleX < 0 || circleX > width) {
+        xSpeed = xSpeed * -1;
+      }
+
+      // bounce off top and bottom
+      if (circleY < 0 || circleY > height) {
+        ySpeed = ySpeed * -1;
+      }
+    }
+  </script>
+</body>
+</html>

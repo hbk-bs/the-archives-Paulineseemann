@@ -10,47 +10,6 @@ h1 {
 
   }
   
-  
-  ul {
-    list-style: none;
-    text-align: left;
-  }
-  ul {
-    line-height: 24px;
-  }
-
-  
-  
-  a:hover {
-    background-color: hsl(313, 100%, 56%);
-    text-decoration: none;
-    color: hsl(330, 10%, 4%);
-    cursor: pointer; 
-    transition: all 0.3s ease;
-    
-    
-    a:visited {
-      color: hsl(282, 100%, 41%);
-        text-decoration: hsl(282, 100%, 41%);
-      background-color: hsl(282, 100%, 41%);
-    }
-  }
-  
-  a {
-    color: white;
-  }
-  
-footer{
-    background-color: hsl(330, 10%, 4%);
-    color: hsl(0, 0%, 96%);
-    font-family: "Courier New", monospace;
-    text-shadow: 8px 5px hsl(313, 100%, 56%);
-    text-align: center;
-    margin-top: 36px;
-    padding: 10px;
-}
-
-
   .motion-header {
     background-color: black;
   }
@@ -69,7 +28,13 @@ footer{
   
   main {
     font-family: "Courier New", monospace;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     padding: 16px;
+
     max-width: 600px;
     margin: 16px auto;
     background-color: hsl(330, 10%, 4%);
@@ -111,8 +76,8 @@ footer{
     text-align: center;
   }
   
-  img {
-    width: 8%;
+  figure img {
+    width: 60%;
     display: block;
     margin-bottom: 16px;
     margin-left: auto;
