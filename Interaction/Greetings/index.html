@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock with Time of Day Messages</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #222;
+    }
+    canvas {
+      border: 2px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function setup() {
+      colorMode(HSL, 360, 100, 100, 100);
+      createCanvas(600, 200);
+      textAlign(CENTER, CENTER);
+      noStroke();
+    }
+
+    function draw() {
+      if (hour() < 5) {
+        drawLateNight();
+      } else if (hour() < 12) {
+        drawMorning();
+      } else if (hour() < 16) {
+        drawAfternoon();
+      } else {
+        drawEvening();
+      }
+
+      let formattedHour = hour();
+      if (hour() == 0) {
+        formattedHour = 12;
+      } else if (hour() > 12) {
+        formattedHour = hour() - 12;
+      }
+
+      const formattedMinute = nf(minute(), 2);
+
+      text(formattedHour + ":" + formattedMinute, width * 0.5, height * 0.25);
+    }
+
+    function drawLateNight() {
+      background(300, 4, 14);
+      fill(0, 0, 100);
+      drawTimeMessage("Sleep well and dream big", "😴");
+    }
+
+    function drawMorning() {
+      background(57, 100, 84);
+      fill(0, 0, 11);
+      drawTimeMessage("Rise and shine", "🌞");
+    }
+
+    function drawAfternoon() {
+      background(204, 100, 37);
+      fill(0, 0, 100);
+      drawTimeMessage("It´s tea time", "☕️");
+    }
+
+    function drawEvening() {
+      background(233, 100, 27);
+      fill(0, 0, 100);
+      drawTimeMessage("Enjoy the peacefulness of the evening", "🌚");
+    }
+
+    function drawTimeMessage(message, emoji) {
+      textFont("Courier New");
+      textSize(25);
+      text(message, width * 0.5, height * 0.5);
+      textSize(25);
+      text(emoji, width * 0.5, height * 0.75);
+    }
+  </script>
+</body>
+</html>

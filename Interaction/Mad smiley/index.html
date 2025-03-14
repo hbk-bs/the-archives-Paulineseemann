@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js Sketch</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+  <script>
+    let isMad = false;
+
+    function setup() {
+      colorMode(HSL, 360, 100, 100, 100);
+      createCanvas(600, 200);
+      textAlign(CENTER, CENTER);
+      textSize(144);
+    }
+
+    function draw() {
+      if (isMad) {
+        background(2, 100, 50);
+        text("😠", width / 2 + random(-10, 10), height / 2 + random(-10, 10));
+      } else {
+        background(90, 100, 49);
+        text("🙂", width / 2, height / 2);
+      }
+    }
+
+    function mousePressed() {
+      isMad = !isMad;
+    }
+  </script>
+</body>
+</html>

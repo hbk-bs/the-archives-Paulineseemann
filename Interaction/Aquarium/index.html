@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fische Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    var fishes = [];
+    var r = 30;
+    var r1 = 7;
+    var r2 = 3;
+
+    function setup() {
+      createCanvas(600, 200);
+    }
+
+    function draw() {
+      background(80, 180, 205);
+
+      // display
+      for (var i = 0; i < fishes.length; i++) {
+        var currentObj = fishes[i];
+        fish(currentObj.xpos, currentObj.ypos, currentObj.size);
+        currentObj.xpos += 0.5;
+        currentObj.ypos += random(-0.5, 0.5);
+        if (fishes[i].xpos > width + 20) {
+          fishes.splice(i, 1);
+        }
+      }
+    }
+
+    function fish(x, y, size) {
+      // tail
+      fill(226, 52, 60);
+      arc(
+        x - 30,
+        y,
+        random(r - 7, r - 10),
+        r - 10,
+        random(90 + 45, 90 + 50),
+        random(90 + 130, 90 + 135)
+      );
+
+      // body
+      fill(54, 94, 129);
+      noStroke();
+      ellipse(x, y, size * 40, size * 20);
+
+      // eyes
+      strokeWeight(0);
+      fill(255);
+      ellipse(x + 15, y - 5, r1, r1);
+
+      // eyeball
+      fill(0);
+      ellipse(x + 17, y - 5, r2, r2);
+
+      // red dot
+      fill(226, 52, 60);
+      strokeWeight(0);
+      ellipse(x + 10, y, r1, r1);
+    }
+
+    function mousePressed() {
+      var newFish = {
+        xpos: mouseX,
+        ypos: mouseY,
+        size: random(1, 1.5)
+      };
+      fishes.push(newFish);
+    }
+  </script>
+
+</body>
+</html>
