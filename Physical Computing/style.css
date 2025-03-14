@@ -69,6 +69,36 @@ h1 {
     margin-bottom: 36px;
   }
   
+  ul {
+    list-style: none;
+    text-align: left;
+  }
+  ul {
+    line-height: 24px;
+  }
+
+  
+  
+  a:hover {
+    background-color: hsl(313, 100%, 56%);
+    text-decoration: none;
+    color: hsl(330, 10%, 4%);
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    
+    
+    a:visited {
+      color: hsl(282, 100%, 41%);
+        text-decoration: hsl(282, 100%, 41%);
+      background-color: hsl(282, 100%, 41%);
+    }
+  }
+  a {
+    color: white;
+   
+    
+  }
+
   figure {
     margin: 0;
     padding: 0;

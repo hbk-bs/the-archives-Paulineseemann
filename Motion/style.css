@@ -87,7 +87,8 @@ figure img {
 iframe {
     margin-bottom: 36px;
     width: 100%; 
-    max-width: 500px; 
+     
+    height: 300px;
     border: none;
     display: block;
     padding-bottom: 36px;
