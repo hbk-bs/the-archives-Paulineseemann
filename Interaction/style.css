@@ -53,6 +53,7 @@ article {
     flex-grow: 1;
     flex-shrink: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 16px; /* Abstand zwischen den flexiblen Elementen */
 }
 
 .center-left-text {
@@ -83,16 +84,18 @@ figure img {
     padding: 16px;
 }
 
+
 iframe {
     margin-bottom: 36px;
-    width: 560px;
+    width: 100%; 
+    max-width: 100%; 
     height: 190px;
     border: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 36px;
-    
+    flex-grow: 1; 
 }
 
 @media (max-width: 768px) {
@@ -147,6 +150,9 @@ iframe {
 }
 
 @media (max-width: 480px) {
+
+  
+   
     header {
         padding: 8px;
         font-size: 1.2rem;
